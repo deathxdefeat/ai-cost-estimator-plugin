@@ -86,6 +86,18 @@ Request JSON output for programmatic use (follows the canonical schema in `refer
 
 Try the interactive version at [f3strategy.com](https://f3strategy.com) — file uploads, visual comparisons, shareable reports.
 
+## Privacy Policy
+
+This plugin collects no user data. It consists entirely of local Markdown instruction files that run within your Claude session. No network requests, no telemetry, no data transmission to F3 Strategy or any third party.
+
+The companion web tool at f3strategy.com collects anonymous submission data for benchmark analysis. For complete privacy information, see our privacy policy: https://f3strategy.com/privacy
+
+### Data Collection
+- **Plugin/Skill**: Zero data collected. Fully local.
+- **Web tool**: Anonymous project descriptions and estimate results only. No names, emails, or personally identifiable information.
+- **Third parties**: Web tool sends descriptions to Anthropic's API for estimation and stores anonymous results in Supabase. Data is never sold.
+- **Retention**: Anonymous web submissions retained indefinitely for benchmarking. Plugin stores nothing.
+
 ## License
 
 Apache-2.0 — See [LICENSE](LICENSE)
