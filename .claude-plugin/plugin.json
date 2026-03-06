@@ -1,0 +1,23 @@
+{
+  "name": "ai-cost-estimator",
+  "description": "Estimate what any project would have cost without AI. Pre-AI vs post-AI cost comparison with locked US market rate table, role-by-role breakdown, and full project forecasting.",
+  "version": "1.0.0",
+  "author": {
+    "name": "F3 Strategy",
+    "url": "https://f3strategy.com"
+  },
+  "homepage": "https://f3strategy.com/tools/pre-ai-price-tag",
+  "repository": "https://github.com/deathxdefeat/ai-cost-estimator-plugin",
+  "license": "Apache-2.0",
+  "keywords": [
+    "cost-estimation",
+    "ai-savings",
+    "project-planning",
+    "roi",
+    "budgeting",
+    "pre-ai",
+    "traditional-development",
+    "rate-comparison"
+  ],
+  "skills": "./skills/"
+}
