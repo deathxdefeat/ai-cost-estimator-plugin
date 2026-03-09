@@ -1,6 +1,6 @@
 Scan everything you know about this project — codebase, architecture, data sources, integrations, docs, and any context from memory or project files. Estimate what it would have cost a traditional team to build everything completed so far.
 
-Use the ai-cost-estimator skill for the full rate table, estimation rules, and output format. If the skill is not available, use these rates:
+Use the thavage skill for the full rate table, estimation rules, and output format. If the skill is not available, use these rates:
 
 - Senior Full-Stack Developer: $125/hr
 - Mid-Level Developer: $95/hr

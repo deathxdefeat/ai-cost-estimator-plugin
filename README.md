@@ -1,4 +1,4 @@
-# AI Cost Estimator — Claude Code Plugin
+# Thavage — Claude Code Plugin
 
 **What would your project have cost without AI?**
 
@@ -8,8 +8,8 @@ A Claude Code plugin that estimates what a traditional team would have charged t
 
 | Component | Path | Purpose |
 |---|---|---|
-| **Skill** | `skills/ai-cost-estimator/SKILL.md` | Core estimation logic with locked rate table, calculation formulas, and output format |
-| **JSON spec** | `skills/ai-cost-estimator/references/output-spec.md` | Canonical JSON schema for programmatic output |
+| **Skill** | `skills/thavage/SKILL.md` | Core estimation logic with locked rate table, calculation formulas, and output format |
+| **JSON spec** | `skills/thavage/references/output-spec.md` | Canonical JSON schema for programmatic output |
 | **Slash command** | `commands/cost-estimate.md` | `/cost-estimate` command for quick estimation from the terminal |
 
 ## Install
@@ -17,7 +17,7 @@ A Claude Code plugin that estimates what a traditional team would have charged t
 ### Claude Code (recommended)
 
 ```bash
-claude plugin install deathxdefeat/ai-cost-estimator-plugin
+claude plugin install deathxdefeat/thavage-plugin
 ```
 
 ### Manual install
@@ -25,12 +25,12 @@ claude plugin install deathxdefeat/ai-cost-estimator-plugin
 Clone into your project's `.claude/plugins/` directory:
 
 ```bash
-git clone https://github.com/deathxdefeat/ai-cost-estimator-plugin.git .claude/plugins/ai-cost-estimator-plugin
+git clone https://github.com/deathxdefeat/thavage-plugin.git .claude/plugins/thavage-plugin
 ```
 
 ### Claude.ai
 
-Download the `.skill` file from the [Pre-AI Price Tag](https://f3strategy.com) and upload via Settings > Features.
+Download the `.skill` file from [Thavage](https://thavage.com) and upload via Settings > Features.
 
 ## Usage
 
@@ -84,13 +84,13 @@ Request JSON output for programmatic use (follows the canonical schema in `refer
 
 ## Web tool
 
-Try the interactive version at [f3strategy.com](https://f3strategy.com) — file uploads, visual comparisons, shareable reports.
+Try the interactive version at [thavage.com](https://thavage.com) — file uploads, visual comparisons, shareable reports.
 
 ## Privacy Policy
 
 This plugin collects no user data. It consists entirely of local Markdown instruction files that run within your Claude session. No network requests, no telemetry, no data transmission to F3 Strategy or any third party.
 
-The companion web tool at f3strategy.com collects anonymous submission data for benchmark analysis. For complete privacy information, see our privacy policy: https://f3strategy.com/privacy
+The companion web tool at thavage.com collects anonymous submission data for benchmark analysis. For complete privacy information, see our privacy policy: https://thavage.com/privacy
 
 ### Data Collection
 - **Plugin/Skill**: Zero data collected. Fully local.

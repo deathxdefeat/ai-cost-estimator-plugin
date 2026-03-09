@@ -1,14 +1,14 @@
 {
-  "name": "ai-cost-estimator",
+  "name": "thavage",
   "description": "Estimate what any project would have cost without AI. Pre-AI vs post-AI cost comparison with locked US market rate table, role-by-role breakdown, and full project forecasting.",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": {
     "name": "F3 Strategy",
     "url": "https://f3strategy.com"
   },
-  "homepage": "https://f3strategy.com",
-  "privacy_policy": "https://f3strategy.com/privacy",
-  "repository": "https://github.com/deathxdefeat/ai-cost-estimator-plugin",
+  "homepage": "https://thavage.com",
+  "privacy_policy": "https://thavage.com/privacy",
+  "repository": "https://github.com/deathxdefeat/thavage-plugin",
   "license": "Apache-2.0",
   "keywords": [
     "cost-estimation",
@@ -18,7 +18,8 @@
     "budgeting",
     "pre-ai",
     "traditional-development",
-    "rate-comparison"
+    "rate-comparison",
+    "thavage"
   ],
   "skills": "./skills/",
   "commands": "./commands/"
