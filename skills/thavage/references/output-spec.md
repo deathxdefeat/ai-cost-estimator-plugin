@@ -2,10 +2,15 @@
 
 Use this spec when the user requests JSON output for the web tool, API, or data export. Return ONLY valid JSON — no markdown, no backticks, no explanation.
 
-## JSON Schema
+## Mode
+
+Always include `"mode": "retrospective"` or `"mode": "prospective"` and then use the matching schema.
+
+## Retrospective Schema
 
 ```json
 {
+  "mode": "retrospective",
   "project_name": "string — short name for the project",
   "project_type": "software | physical | hybrid",
   "completion_pct": 0-100,
@@ -57,6 +62,59 @@ Use this spec when the user requests JSON output for the web tool, API, or data 
 }
 ```
 
+## Prospective Schema
+
+```json
+{
+  "mode": "prospective",
+  "project_name": "string — short name for the project",
+  "project_type": "software",
+  "summary_line": "string — one punchy sentence describing what will be built",
+  "traditional_anchor": {
+    "total_cost": 95000,
+    "total_hours": 700,
+    "calendar_months": 6,
+    "team_size": 4,
+    "line_items": [
+      {
+        "label": "Component name",
+        "hours": 120,
+        "cost": 15000,
+        "rate_basis": "$125/hr senior full-stack dev"
+      }
+    ]
+  },
+  "mode2_additions": {
+    "year_one_total": 6200,
+    "build_phase_cost": 2400,
+    "monthly_operations_cost": 320,
+    "build_timeline_weeks": 10,
+    "ai_subscription_monthly": 20,
+    "saas_monthly": 180,
+    "tools_stack": [
+      {
+        "service": "Supabase",
+        "tier": "Free | Paid",
+        "monthly_cost": 0
+      }
+    ],
+    "diy_line_items": [
+      {
+        "label": "Hosting and database",
+        "basis": "12 months of recurring usage at stated scale",
+        "cost": 300
+      }
+    ]
+  },
+  "reductions": {
+    "cost_pct": 93
+  },
+  "speed_multiplier": 6,
+  "hero_stat": "$88,800 cheaper than hiring a team",
+  "hook_line": "What a team of 4 would quote at $95K, you can build yourself for under $6.2K in year one."
+}
+```
+
 ## Schema Rules
 
 - `forecast_full.enabled` = true only when `completion_pct` < 100
@@ -66,5 +124,6 @@ Use this spec when the user requests JSON output for the web tool, API, or data 
 - `hero_stat` = formatted string of net savings (e.g. "$257,947 saved")
 - `hook_line` = one sentence, loss-framed ("What would have cost…" or "What took…")
 - All cost values are integers (no decimals)
-- `line_items` must have at least 3 items per section; aim for 6–12 for pre-AI
-- Every line item must have all 4 fields populated: label, hours, cost, rate_basis
+- Retrospective `line_items` must have at least 3 items per section; aim for 6–12 for pre-AI
+- Retrospective line items must have all 4 fields populated: `label`, `hours`, `cost`, `rate_basis`
+- Prospective `diy_line_items` should cover build-phase and recurring cost categories and use `label`, `basis`, and `cost`

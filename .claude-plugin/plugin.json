@@ -1,7 +1,7 @@
 {
   "name": "thavage",
-  "description": "Estimate what any project would have cost without AI. Pre-AI vs post-AI cost comparison with locked US market rate table, role-by-role breakdown, and full project forecasting.",
-  "version": "1.1.0",
+  "description": "Estimate completed work or plan a new AI-assisted software build. Includes retrospective benchmarking, prospective DIY year-one budgeting, locked US market rates, and traditional-team anchors.",
+  "version": "1.2.0",
   "author": {
     "name": "F3 Strategy",
     "url": "https://f3strategy.com"
@@ -14,9 +14,11 @@
     "cost-estimation",
     "ai-savings",
     "project-planning",
+    "build-planning",
     "roi",
     "budgeting",
     "pre-ai",
+    "prospective",
     "traditional-development",
     "rate-comparison",
     "thavage"

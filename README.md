@@ -2,15 +2,19 @@
 
 **What would your project have cost without AI?**
 
-A Claude Code plugin that estimates what a traditional team would have charged to build any project, then compares it to what it actually cost using AI tools. Produces a full cost breakdown, timeline comparison, team size reduction, ROI calculation, and shareable report.
+A Claude Code plugin that now supports two flows:
+- retrospective benchmarking for work you already built with AI
+- prospective DIY year-one budgeting for planned software builds
+
+It produces conservative cost anchors, line-item breakdowns, timeline comparisons, and shareable planning artifacts using the same locked rate table as thavage.com.
 
 ## What's included
 
 | Component | Path | Purpose |
 |---|---|---|
-| **Skill** | `skills/thavage/SKILL.md` | Core estimation logic with locked rate table, calculation formulas, and output format |
+| **Skill** | `skills/thavage/SKILL.md` | Shared estimation logic for retrospective and prospective modes |
 | **JSON spec** | `skills/thavage/references/output-spec.md` | Canonical JSON schema for programmatic output |
-| **Slash command** | `commands/cost-estimate.md` | `/cost-estimate` command for quick estimation from the terminal |
+| **Slash commands** | `commands/cost-estimate.md`, `commands/plan-build.md` | `/cost-estimate` for completed work, `/plan-build` for planned builds |
 
 ## Install
 
@@ -42,6 +46,14 @@ Download the `.skill` file from [Thavage](https://thavage.com) and upload via Se
 
 Scans your current project context and produces a full pre-AI vs post-AI cost comparison.
 
+### Prospective planning command
+
+```
+/plan-build
+```
+
+Scans the same project context and produces a DIY year-one build budget plus a traditional-team anchor for a planned software build.
+
 ### Natural language
 
 Just describe a project:
@@ -52,7 +64,7 @@ Just describe a project:
 
 > "Run a cost comparison on this codebase"
 
-## Rate table (US Market, 2025–2026)
+## Locked rate table (US Market, 2025–2026)
 
 | Role | Rate/hr |
 |---|---|
@@ -71,7 +83,7 @@ Rates are locked. No ranges. Conservative by default — hours round UP when unc
 
 ## Output
 
-The estimate includes:
+Retrospective estimates include:
 
 - **Before vs. After table** — cost, hours, calendar time, team size with percentage reductions
 - **Key numbers** — speed multiplier, ROI on AI tools, net savings, $/AI hour
@@ -80,11 +92,19 @@ The estimate includes:
 - **Full project forecast** — projected total cost if project is partially complete
 - **Assumptions** — rate basis, exclusions, confidence level
 
-Request JSON output for programmatic use (follows the canonical schema in `references/output-spec.md`).
+Prospective planning estimates include:
+
+- **DIY year-one total** — build-phase spend plus 12 months of recurring ops
+- **Traditional team anchor** — a conservative quote benchmark using the same rate table
+- **DIY line items** — subscriptions, runtime costs, and implementation assumptions
+- **Timeline comparison** — AI-assisted build timeline versus traditional delivery
+- **Assumptions** — rate basis, exclusions, confidence level, and scale assumptions
+
+Request JSON output for programmatic use. The spec now supports both retrospective and prospective variants in `references/output-spec.md`.
 
 ## Web tool
 
-Try the interactive version at [thavage.com](https://thavage.com) — file uploads, visual comparisons, shareable reports.
+Try the interactive version at [thavage.com](https://thavage.com) — methodology, examples, use cases, comparisons, file uploads, visual comparisons, and shareable reports.
 
 ## Privacy Policy
 
